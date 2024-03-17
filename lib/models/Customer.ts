@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
+import { number } from "zod";
 
 const customerSchema = new mongoose.Schema({
   clerkId: String,
   name: String,
   email: String,
+  phone: Number,
   orders: {
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order"}]
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }],
   },
   createdAt: {
     type: Date,
@@ -14,9 +16,10 @@ const customerSchema = new mongoose.Schema({
   updatedAt: {
     type: Date,
     default: Date.now,
-  }
+  },
 });
 
-const Customer = mongoose.models.Customer || mongoose.model("Customer", customerSchema);
+const Customer =
+  mongoose.models.Customer || mongoose.model("Customer", customerSchema);
 
 export default Customer;
