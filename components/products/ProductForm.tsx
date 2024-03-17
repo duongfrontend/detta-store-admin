@@ -196,7 +196,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
           <div className="md:grid md:grid-cols-3 gap-8">
             <FormField
               control={form.control}
-              name="price"
+              name="expense"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Giá (VND)</FormLabel>
@@ -214,7 +214,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
             />
             <FormField
               control={form.control}
-              name="expense"
+              name="price"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Giá Sale (VND)</FormLabel>
