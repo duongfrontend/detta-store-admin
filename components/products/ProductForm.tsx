@@ -26,16 +26,16 @@ import MultiSelect from "../custom ui/MultiSelect";
 import Loader from "../custom ui/Loader";
 
 const formSchema = z.object({
-  title: z.string().min(2).max(20),
-  description: z.string().min(2).max(500).trim(),
+  title: z.string().min(2).max(2000),
+  description: z.string().min(2).max(5000).trim(),
   media: z.array(z.string()),
   category: z.string(),
   collections: z.array(z.string()),
   tags: z.array(z.string()),
   sizes: z.array(z.string()),
   colors: z.array(z.string()),
-  price: z.coerce.number().min(0.1),
-  expense: z.coerce.number().min(0.1),
+  price: z.coerce.number().min(0),
+  expense: z.coerce.number().min(0),
 });
 
 interface ProductFormProps {
@@ -84,8 +84,8 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
           tags: [],
           sizes: [],
           colors: [],
-          price: 0.1,
-          expense: 0.1,
+          price: 0,
+          expense: 0,
         },
   });
 
