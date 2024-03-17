@@ -28,7 +28,7 @@ const Delete: React.FC<DeleteProps> = ({ item, id }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      const itemType = item === "Sản phẩm" ? "Sản phẩm" : "Danh mục";
+      const itemType = item === "product" ? "products" : "collections";
       const res = await fetch(`/api/${itemType}/${id}`, {
         method: "DELETE",
       });
@@ -36,7 +36,7 @@ const Delete: React.FC<DeleteProps> = ({ item, id }) => {
       if (res.ok) {
         setLoading(false);
         window.location.href = `/${itemType}`;
-        toast.success(`${item} đã xóa thành công`);
+        toast.success(`${item} deleted`);
       }
     } catch (err) {
       console.log(err);
