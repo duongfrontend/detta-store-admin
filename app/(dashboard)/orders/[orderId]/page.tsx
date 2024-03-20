@@ -35,6 +35,18 @@ const OrderDetails = async ({ params }: { params: { orderId: string } }) => {
           </span>
         </p>
         <p className="text-base-bold text-orange-700 p-[10px] border-b-[1px] border-[#dddddd] w-max  ">
+          Số điện thoại:{" "}
+          <span className="text-base-medium text-[#333333] text-[16px]">
+            {postalCode}
+          </span>
+        </p>
+        <p className="text-base-bold text-orange-700 p-[10px] border-b-[1px] border-[#dddddd] w-max  ">
+          Email:{" "}
+          <span className="text-base-medium text-[#333333] text-[16px]">
+            {customer.email}
+          </span>
+        </p>
+        <p className="text-base-bold text-orange-700 p-[10px] border-b-[1px] border-[#dddddd] w-max  ">
           Địa chỉ giao hàng:{" "}
           <span className="text-base-medium text-[#333333] text-[16px]">
             {street}, {city}, {country}
