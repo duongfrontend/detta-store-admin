@@ -32,8 +32,8 @@ const LeftSideBar = () => {
       </div>
 
       <div className="flex gap-4 text-body-medium items-center  p-[10px] justify-center items-center bg-blue-500 rounded-[5px]">
-        <UserButton />
-        <button className="text-white">Tài Khoản</button>
+        <UserButton showName />
+        {/* <button className="text-white">Tài Khoản</button> */}
       </div>
     </div>
   );
